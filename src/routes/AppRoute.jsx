@@ -6,8 +6,9 @@ import {
   Link
 } from "react-router-dom";
 import { Informacion } from "../components/Informacion/Informacion";
-import { Index } from "../components/Index";
+import { Index } from "../components/Home/Index";
 import { NavBar } from "../components/ui/NavBar";
+import { Footer } from "../components/ui/Footer";
 
 export const AppRoute = () => {
     return (
@@ -23,6 +24,7 @@ export const AppRoute = () => {
             
           </Switch>
         </div>
+        <Footer />
       </Router>
     )
 }

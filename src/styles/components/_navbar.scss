@@ -1,0 +1,71 @@
+
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.navbar__logo{
+    background-color: $colorPrimario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.navbar__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $complemento2;
+}
+.navbar__navbar {
+    display: flex;
+    padding: 5px;
+}
+.navbar__titulo{
+    text-align: center;
+    background-color: $complemento;
+    padding: 5px;
+    width: 100%;
+    a {
+        color: black;
+        font-size: $tamaño1;
+        font-weight: 700px;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+    }
+}
+.navbar__titulo a:hover {
+    
+    text-decoration: underline;
+}
+.navbar__icono {
+    font-size: 10px;
+    color: white;
+    margin-left: 10px;
+}
+.navbar__usco-icono {
+    width: 25px;
+    object-fit: cover;
+}
+
+.navbar__items {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar__items-decoration {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    
+}
+.navbar__items-decoration {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    
+}
+
