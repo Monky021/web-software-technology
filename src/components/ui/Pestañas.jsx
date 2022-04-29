@@ -22,21 +22,24 @@ export const Pestañas = () => {
           <a href="/" className="item__boton">Información</a>
           <ul className="pestaña__menu-despegable">
             <li >
-              <Link to='/'> Justificación  </Link>
+              <Link to='#justificación'> Justificación  </Link>
             </li>
             <li>
-              <Link to='/'> Misión  </Link>
+              <Link to='/#misión'> Misión  </Link>
             </li>
             <li>
-              <Link to='/'> Visión  </Link>
+              <Link to='/#visión'> Visión  </Link>
             </li>
             <li>
-              <Link to='/'> Denominación académica  </Link>
+              <Link to='/#denominación'> Denominación académica  </Link>
+            </li>
+            <li>
+              <Link to='#SNIES'> Registro SNIES  </Link>
             </li>
           </ul>
         </li>
         <li className="pestañas__item">
-          <a  href="/" className="item__boton">Perfil</a>
+          <Link  to='/perfil' className="item__boton">Perfil</Link>
         </li>
         <li className="pestañas__item">
           <a href="/" className="item__boton">Plan de estudios</a>

@@ -24,7 +24,7 @@ export const Index = () => {
       <Grid container direction="column" style={{ padding: "0px 10vw" }}>
         <Grid item>
           <Box bgcolor={grisClaro} padding={8} marginBottom={5}>
-            <h1 className={classes.textTituloHome}>
+            <h1 className="home__title" id='#justificación'>
               Justificación - Introducción
             </h1>
             <p className={classes.textParrafo}>
@@ -45,7 +45,7 @@ export const Index = () => {
               productivo con una visión prospectiva, sistémica e innovadora.
             </p>
             <hr />
-            <h1 className={classes.textTituloHome}> Misión</h1>
+            <h1 className="home__title"> Misión</h1>
             <p className={classes.textParrafo}>
               Brindar capacitación a jóvenes para realizar software de alta
               calidad y promover el uso de nuevas tecnologías, fortaleciendo el
@@ -54,7 +54,7 @@ export const Index = () => {
               servicios.
             </p>
             <hr />
-            <h1 className={classes.textTituloHome}>Visión</h1>
+            <h1 className="home__title">Visión</h1>
             <p className={classes.textParrafo}>
               Consolidarnos como capacitadores en el desarrollo de software, que
               incentive el avance tecnológico, motivante el uso de nuevas
@@ -62,7 +62,7 @@ export const Index = () => {
               calidad de los procesos de la industria en nuestro país.
             </p>
             <hr />
-            <h1 className={classes.textTituloHome}>Denominación académica</h1>
+            <h1 className="home__title">Denominación académica</h1>
             <p className={classes.textParrafo}>
               El programa de Tecnología en Desarrollo de Software tiene registro
               calificado para las cuatro sedes de la Universidad Surcolombiana
@@ -78,7 +78,7 @@ export const Index = () => {
               </ul>
             </p>
             <hr />
-            <h1 className={classes.textTituloHome}>Registro SNIES</h1>
+            <h1 className="home__title" id='SNIES'>Registro SNIES</h1>
             <TableContainer component={Paper} className={classes.table}>
               <Table>
                 <TableHead>
