@@ -31,7 +31,7 @@ export const NavBar = () => {
             <img src={uscoIcono} alt="usco" className={classes.imgUsco}/>
             <Link to="/" className={classes.enlacesSecundarios1} >Universidad Surcolombiana</Link>
             <LoginIcon className={classes.iconos} />
-            <Link to="/info" className={classes.enlacesSecundarios2}> Ingreso </Link>
+            <Link to="/inicio-sesion" className={classes.enlacesSecundarios2}> Ingreso </Link>
 
             <LocalPhoneIcon className={classes.iconos}/>
             <Link to="/contacto" className={classes.enlacesSecundarios3}> Contacto</Link>
