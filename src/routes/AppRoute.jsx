@@ -6,9 +6,11 @@ import {
   Link
 } from "react-router-dom";
 import { Informacion } from "../components/Informacion/Informacion";
-import { Index } from "../components/Index";
+import { Index } from "../components/Home/Index";
 import { NavBar } from "../components/ui/NavBar";
 import { LoginScreen } from "../components/Login/LoginScreen";
+import { Footer } from "../components/ui/Footer";
+import { PerfilScreen } from "../components/Perfil/PerfilScreen";
 
 export const AppRoute = () => {
     return (
@@ -21,9 +23,13 @@ export const AppRoute = () => {
             <Route path="/" exact component={Index}/>
             <Route path="/info" exact component={Informacion} />
             <Route path='/inicio-sesion' exact component={LoginScreen}  />
+            <Route path="/perfil" exact component={PerfilScreen} />
+
+              
             
           </Switch>
         </div>
+        <Footer />
       </Router>
     )
 }

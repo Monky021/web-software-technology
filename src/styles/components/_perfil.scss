@@ -1,0 +1,31 @@
+
+.perfil-container {
+    padding: 0px 10vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container__text {
+    background-color: $grisClaro;
+}
+
+.text__title{
+    font-family: $fontPrincipal;
+    font-size: $tamañoTitulo;
+    font-weight: 500;
+    padding: 10px;
+}
+.text__paragraph{
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: $tamaño1;
+    padding: 20px;
+}
+.text__list{
+    margin-top: 10px;
+    font-size: $tamaño1;
+}
+.text__list-item{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
