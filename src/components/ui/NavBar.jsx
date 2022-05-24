@@ -23,7 +23,7 @@ export const NavBar = () => {
           <img src={uscoIcono} className="navbar__usco-icono" alt="usco" />
           <Link to="/" className="navbar__items navbar__items-decoration">Universidad Surcolombiana</Link>
           <LoginIcon className="navbar__icono"/>
-          <Link to="/info" className="navbar__items navbar__items-decoration"> Ingreso </Link>
+          <Link to="/inicio-sesion" className="navbar__items navbar__items-decoration"> Ingreso </Link>
           <LocalPhoneIcon className="navbar__icono"/>
           <Link to="/contacto" className="navbar__items"> Contacto</Link>
         </nav>
