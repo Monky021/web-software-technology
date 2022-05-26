@@ -1,7 +1,11 @@
+import { BoxLogin } from "./BoxLogin"
+
 
 
 export const LoginScreen = () => {
   return (
-    <div>LoginScreen</div>
+    <div className="login" >
+      <BoxLogin />
+    </div>
   )
 }

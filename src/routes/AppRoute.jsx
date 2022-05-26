@@ -8,9 +8,9 @@ import {
 import { Informacion } from "../components/Informacion/Informacion";
 import { Index } from "../components/Home/Index";
 import { NavBar } from "../components/ui/NavBar";
-import { LoginScreen } from "../components/Login/LoginScreen";
 import { Footer } from "../components/ui/Footer";
 import { PerfilScreen } from "../components/Perfil/PerfilScreen";
+import { LoginScreen } from "../components/Login/LoginScreen";
 
 export const AppRoute = () => {
     return (

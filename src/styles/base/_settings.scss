@@ -9,6 +9,10 @@ $complemento: #dfd4a6;
 $complemento2: #4d626c;
 $grisClaro: #f2f2f2; 
 $complemento3: #ebe4e4;
+$sombraRoja: #c4afaf;
+$sombraRojaOscura: #a98080;
+
+
 
 
 
@@ -21,3 +25,17 @@ $tamañoTitulo : 2.5em;
 
 $fontPrincipal: 'Roboto', sans-serif;
 
+
+
+//tamaños de pantalla
+
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
