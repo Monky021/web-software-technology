@@ -2,7 +2,8 @@ import { types } from "../types/types";
 
 
 const initialState = {
-    usuario: {}
+    usuario: {},
+    autentificado: false,
 }
 
 export const userReducer = ( state=initialState, action ) => {
@@ -11,7 +12,8 @@ export const userReducer = ( state=initialState, action ) => {
         case types.setUser:
             return {
                 ...state,
-                usuario: action.payload
+                usuario: action.payload,
+                autentificado: true
             }
         
         

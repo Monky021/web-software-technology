@@ -11,6 +11,7 @@ import { NavBar } from "../components/ui/NavBar";
 import { Footer } from "../components/ui/Footer";
 import { PerfilScreen } from "../components/Perfil/PerfilScreen";
 import { LoginScreen } from "../components/Login/LoginScreen";
+import { EstudianteScreen } from "../components/Estudiante/EstudianteScreen";
 
 export const AppRoute = () => {
     return (
@@ -24,6 +25,7 @@ export const AppRoute = () => {
             <Route path="/info" exact component={Informacion} />
             <Route path='/inicio-sesion' exact component={LoginScreen}  />
             <Route path="/perfil" exact component={PerfilScreen} />
+            <Route path="/estudiante" exact component={EstudianteScreen} />
 
               
             

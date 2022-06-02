@@ -1,12 +1,14 @@
 import { useForm } from "../../hooks/useForm"
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { doLogin } from "../../actions/userAction"
+import { useEffect } from "react"
+import { useHistory } from "react-router-dom"
 export const FormLogin = () => {
 
 
   const dispatch = useDispatch()
-
-
+  const history = useHistory()
+  const autentificado = useSelector(state => state.user.autentificado)
   const [form, handleInputChange, reset] = useForm({
     correo: '',
     password: ''
@@ -22,8 +24,14 @@ export const FormLogin = () => {
     dispatch(doLogin(correo, password))
     
   }
-  console.log({correo, password});
-
+  
+  useEffect(() => {
+    if(autentificado){
+      history.replace('/estudiante')
+    }
+  }, [autentificado, history])
+  
+  
   return (
     <form onSubmit={onSubmitLogin} className='login__form'>
       <div className="box__inputs-login">
@@ -39,7 +47,7 @@ export const FormLogin = () => {
       </div>
 
       <div className="box__buttons-login" >
-        <button className="button__login"> Entrar </button>
+        <button className="button__login" type="submit"> Entrar </button>
         
       </div>
     </form>
