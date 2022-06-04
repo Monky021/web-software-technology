@@ -1,0 +1,36 @@
+
+.box__estudiante {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 40vw;
+    border-radius: 10px;
+    border: 1px solid $complemento;
+    padding: 2em;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: $grisClaro;
+}
+
+.estudiante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.componente {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.img__componente{
+    width: 100px;
+}
+.contenedor__texto {
+    margin-left: 10px;
+}
+.nombre__estudiante{
+    font-size: 1.3em;
+    font-weight: 500;
+}
