@@ -1,0 +1,70 @@
+
+.accordion{
+    // max-width: 800px;
+    background-color: $grisClaro;
+    height: 60vh;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+    border: 1px solid $complemento;
+    border-radius: 5px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $complemento;
+    color: black;
+    cursor: pointer;
+
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+
+}
+.accordion .contentBx.active .label::before{
+    content: '-';
+}
+.accordion .contentBx .content {
+    position: relative;
+    // padding: 10px;
+    background-color: $grisClaro;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: auto;
+    padding: 10px;
+} 
+
+.content{
+    display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+
+}
+.content__text{
+    width: 50%;
+}
+
+
+.img__accordion {
+    width: 250px;
+}
+.box__img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}

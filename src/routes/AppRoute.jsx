@@ -12,8 +12,13 @@ import { Footer } from "../components/ui/Footer";
 import { PerfilScreen } from "../components/Perfil/PerfilScreen";
 import { LoginScreen } from "../components/Login/LoginScreen";
 import { EstudianteScreen } from "../components/Estudiante/EstudianteScreen";
+import { PrivateRoute } from "./PrivateRoute";
+import { useSelector } from "react-redux";
+import { PreguntasFrecuentes } from "../components/PreguntasFrecuentes/PreguntasFrecuentes";
 
 export const AppRoute = () => {
+
+  const autentificado = useSelector(state => state.user.autentificado)
     return (
         <Router>
         <div>
@@ -25,7 +30,10 @@ export const AppRoute = () => {
             <Route path="/info" exact component={Informacion} />
             <Route path='/inicio-sesion' exact component={LoginScreen}  />
             <Route path="/perfil" exact component={PerfilScreen} />
-            <Route path="/estudiante" exact component={EstudianteScreen} />
+            <Route path="/preguntas-frecuentes" exact component={PreguntasFrecuentes} />
+
+
+            <PrivateRoute isAuthenticated={autentificado} path="/estudiante" exact component={EstudianteScreen} />
 
               
             

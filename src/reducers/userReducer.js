@@ -16,7 +16,8 @@ export const userReducer = ( state=initialState, action ) => {
                 autentificado: true
             }
         
-        
+        case types.closeSession: 
+            return initialState
     
         default:
             return state;

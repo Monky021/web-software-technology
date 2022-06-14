@@ -42,10 +42,10 @@ export const Pestañas = () => {
           <Link  to='/perfil' className="item__boton">Perfil</Link>
         </li>
         <li className="pestañas__item">
-          <a href="/" className="item__boton">Plan de estudios</a>
+          <Link to="/plan-estudio" className="item__boton">Plan de estudios</Link>
         </li>
         <li className="pestañas__item">
-          <a href="/" className="item__boton">Preguntas frecuentes</a>
+          <Link to="/preguntas-frecuentes" className="item__boton">Preguntas frecuentes</Link>
         </li>
       </ul>
 

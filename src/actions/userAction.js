@@ -37,3 +37,5 @@ export const doLogin = (correo, password) => async(dispatch) => {
 }
 
 const guardarUsuario = (usuario) => ({ type: types.setUser, payload: usuario})
+
+export const cerrarSesion = () => ({type: types.closeSession}) 
