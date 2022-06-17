@@ -8,10 +8,11 @@ export const doLogin = (correo, password) => async(dispatch) => {
     try {
         const resp = await axios.post(`${urlApi}/login`, {correo, password})
 
-        console.log(resp);
+        
         const usuario = resp.data.estudiante
+        const token = resp.data.token
         dispatch(guardarUsuario(usuario))
-
+        dispatch(listarPreguntas(token))
         
     } catch (error) {
         console.log(error);
@@ -39,3 +40,27 @@ export const doLogin = (correo, password) => async(dispatch) => {
 const guardarUsuario = (usuario) => ({ type: types.setUser, payload: usuario})
 
 export const cerrarSesion = () => ({type: types.closeSession}) 
+
+
+const listarPreguntas = (token) => async(dispatch) => {
+    try {
+        const resp = await axios.get(`${urlApi}/encuesta/listar`, {
+            headers: {
+                token
+            }
+        })
+        const preguntas = resp.data.data
+        dispatch(setPReguntas(preguntas))
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const setPReguntas = (preguntas) => ({type: types.setPreguntas, payload: preguntas})
+
+
+export const setRespuestas = (respuestas) => ({type: types.setRespuestas , payload: respuestas})
+
+export const negarRespuesta = () => ({type: types.negarRespuesta})
+export const cleanRespuestas = () => ({type: types.cleanRespuestas})

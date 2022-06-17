@@ -15,6 +15,7 @@ import { EstudianteScreen } from "../components/Estudiante/EstudianteScreen";
 import { PrivateRoute } from "./PrivateRoute";
 import { useSelector } from "react-redux";
 import { PreguntasFrecuentes } from "../components/PreguntasFrecuentes/PreguntasFrecuentes";
+import { EvaluacionScreen } from "../components/evaluacion/EvaluacionScreen";
 
 export const AppRoute = () => {
 
@@ -31,9 +32,12 @@ export const AppRoute = () => {
             <Route path='/inicio-sesion' exact component={LoginScreen}  />
             <Route path="/perfil" exact component={PerfilScreen} />
             <Route path="/preguntas-frecuentes" exact component={PreguntasFrecuentes} />
+            
 
 
             <PrivateRoute isAuthenticated={autentificado} path="/estudiante" exact component={EstudianteScreen} />
+            <PrivateRoute isAuthenticated={autentificado} path="/estudiante/evaluacion" exact component={EvaluacionScreen} />
+
 
               
             

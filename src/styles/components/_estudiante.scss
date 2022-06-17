@@ -26,6 +26,7 @@
 
 .img__componente{
     width: 100px;
+    cursor: pointer;
 }
 .contenedor__texto {
     margin-left: 10px;
@@ -33,4 +34,10 @@
 .nombre__estudiante{
     font-size: 1.3em;
     font-weight: 500;
+}
+.titulo__componente:hover {
+    cursor: pointer;
+    // transition: 5s;
+    text-decoration: underline;
+    
 }
