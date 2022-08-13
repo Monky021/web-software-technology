@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {  useDispatch, useSelector } from 'react-redux'
-import { negarRespuesta } from '../../actions/userAction'
+import { useHistory } from 'react-router-dom'
+import { negarRespuesta, responderEncuesta } from '../../actions/userAction'
 
 import { Header } from './Header'
 import { Preguntas } from './Preguntas'
@@ -8,11 +9,15 @@ import { Preguntas } from './Preguntas'
 export const BoxEvaluacion = () => {
   
   const dispatch = useDispatch()
+  const history = useHistory()
   const [contador, setContador] = useState(1)
 
   const {preguntas, usuarioResponde, respuestas} = useSelector(state => state.user)
 
   const esFinRespuesta = !respuestas.map(res => res.respuesta).includes(0)
+
+  const token = localStorage.getItem('token')
+  console.log('esFinRespuesta', esFinRespuesta );
 
   const handlerContadorSuma = () => {
     if (contador < preguntas.length) {
@@ -20,8 +25,14 @@ export const BoxEvaluacion = () => {
         
         setContador(prev => prev + 1  )
         dispatch(negarRespuesta())
+        console.log('esFinRespuesta', esFinRespuesta );
+        
       }
     }
+    if (esFinRespuesta) {
+      dispatch(responderEncuesta(respuestas, history, token,  ))
+    }
+
   }
 
   const handlerContadorResta = () => {
@@ -34,7 +45,7 @@ export const BoxEvaluacion = () => {
   }
   return (
     <div className='box'>
-        <Header />
+        <Header titulo={'Evaluación del programa'} />
         <hr />
         {
           preguntas.map((pregunta) => ( 

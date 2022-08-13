@@ -5,7 +5,9 @@
 }
 .header__derecha {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
     width: 38%;
 }
 .icon__header {

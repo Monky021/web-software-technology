@@ -16,6 +16,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { useSelector } from "react-redux";
 import { PreguntasFrecuentes } from "../components/PreguntasFrecuentes/PreguntasFrecuentes";
 import { EvaluacionScreen } from "../components/evaluacion/EvaluacionScreen";
+import { PqrScreen } from "../components/pqr/PqrScreen";
 
 export const AppRoute = () => {
 
@@ -37,6 +38,8 @@ export const AppRoute = () => {
 
             <PrivateRoute isAuthenticated={autentificado} path="/estudiante" exact component={EstudianteScreen} />
             <PrivateRoute isAuthenticated={autentificado} path="/estudiante/evaluacion" exact component={EvaluacionScreen} />
+            <PrivateRoute isAuthenticated={autentificado} path="/estudiante/pqr" exact component={PqrScreen} />
+
 
 
               

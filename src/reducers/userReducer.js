@@ -43,6 +43,14 @@ export const userReducer = ( state=initialState, action ) => {
                 ...state,
                 respuestas: state.respuestas.map(res => ({pregunta_id: res.pregunta_id, respuesta: 0}))
             }
+        case types.respondeEncuesta: 
+            return {
+                ...state,
+                usuario: {
+                    ...state.usuario,
+                    responde_encuesta: true
+                }
+            }
         case types.closeSession: 
             return initialState
     

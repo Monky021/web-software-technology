@@ -13,6 +13,7 @@ export const doLogin = (correo, password) => async(dispatch) => {
         const token = resp.data.token
         dispatch(guardarUsuario(usuario))
         dispatch(listarPreguntas(token))
+        localStorage.setItem('token', token)
         
     } catch (error) {
         console.log(error);
@@ -64,3 +65,65 @@ export const setRespuestas = (respuestas) => ({type: types.setRespuestas , paylo
 
 export const negarRespuesta = () => ({type: types.negarRespuesta})
 export const cleanRespuestas = () => ({type: types.cleanRespuestas})
+
+export const responderEncuesta = (encuesta, history, token) => async(dispatch) => {
+
+    try {
+        const resp = await axios.post(`${urlApi}/encuesta/responder`,{encuesta} , {
+            headers: {
+                token
+            }
+        })
+        if (resp.data.exitoso) {
+            Swal.fire('Encuesta', resp.data.mensaje, 'success' ).then((result) => {
+                if (result.isConfirmed) {
+                    history.replace('/estudiante')
+                    dispatch(updateRespondeEncuesta())
+                }
+            })
+            
+        }
+
+    } catch (error) {
+        if (error.response) {
+            // La respuesta fue hecha y el servidor respondió con un código de estado
+            // que esta fuera del rango de 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // La petición fue hecha pero no se recibió respuesta
+            // `error.request` es una instancia de XMLHttpRequest en el navegador y una instancia de
+            // http.ClientRequest en node.js
+            console.log(error.request);
+          } else {
+            // Algo paso al preparar la petición que lanzo un Error
+            console.log('Error', error.message);
+          }
+          console.log(error.config);
+    }
+}
+
+const updateRespondeEncuesta = () => ({type: types.respondeEncuesta})
+
+
+export const doPqr = (pqr) => async(dispatch) => {
+
+    try {
+        const token = localStorage.getItem('token')
+        const resp = await axios.post(`${urlApi}/pqr/crear`, pqr, {
+            headers: {
+                token
+            }
+        } )
+
+        console.log(resp)
+        if (resp.data.msg === 'Pqr creado') {
+            return Swal.fire('PQR', 'Exitoso', 'success')
+        }
+
+        
+    } catch (error) {
+        console.log(error);
+    }
+}

@@ -1,0 +1,39 @@
+.form__pqr {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+}
+
+.form-first{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box__label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.select{
+    // width: 100px;
+    min-width: 100px;
+}
+.form-second {
+    margin-top: 20px;
+    text-align: left;
+}
+.form-three{
+    margin-top: 20px;
+}
+
+.label__input {
+    display: inline-block;
+    text-align: left;
+}
+.box__button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+}

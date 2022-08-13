@@ -7,5 +7,6 @@ export const types = {
     setPreguntas: 'Se guardan las preguntas [setPReguntas]',
     setRespuestas: 'Se guardan las respuestas [setRespuestas]',
     negarRespuesta: 'Se revierte el estado de usuario responde [negar respuesta]',
-    cleanRespuestas: 'Se limpian las respuestas [cleanRespuestas] '
+    cleanRespuestas: 'Se limpian las respuestas [cleanRespuestas] ',
+    respondeEncuesta: ' se actualiza el valor de responde encuesta del usuario [respondeEncuesta]'
 }

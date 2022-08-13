@@ -18,15 +18,18 @@ export const BoxEstudiante = () => {
     <div className='box__estudiante'>
         <h1 className='nombre__estudiante'> { `${nombre} ${apellido}` } </h1>
         <hr />
+        
         <OpcionComponente 
             titulo={tituloEvaluacion} 
             descripcion={descripcionEvaluacion} 
             img={iconoEvaluacion} 
+            url='/estudiante/evaluacion'
         />
         <OpcionComponente 
             titulo={tituloPqr} 
             descripcion={descripcionPqr} 
             img={iconoPqr} 
+            url={'/estudiante/pqr'}
         />
         
     </div>
