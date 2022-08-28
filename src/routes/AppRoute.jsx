@@ -17,6 +17,7 @@ import { useSelector } from "react-redux";
 import { PreguntasFrecuentes } from "../components/PreguntasFrecuentes/PreguntasFrecuentes";
 import { EvaluacionScreen } from "../components/evaluacion/EvaluacionScreen";
 import { PqrScreen } from "../components/pqr/PqrScreen";
+import { PlanEstudiosScreen } from "../components/plan-estudios/PlanEstudiosScreen";
 
 export const AppRoute = () => {
 
@@ -32,6 +33,8 @@ export const AppRoute = () => {
             <Route path="/info" exact component={Informacion} />
             <Route path='/inicio-sesion' exact component={LoginScreen}  />
             <Route path="/perfil" exact component={PerfilScreen} />
+            <Route path="/plan-estudio" exact component={PlanEstudiosScreen} />
+
             <Route path="/preguntas-frecuentes" exact component={PreguntasFrecuentes} />
             
 
