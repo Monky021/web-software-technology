@@ -19,22 +19,22 @@ export const Pestañas = () => {
     <>
       <ul className="pestañas">
         <li className="pestañas__item">
-          <a href="/" className="item__boton">Información</a>
+          <Link to="/" className="item__boton">Información</Link>
           <ul className="pestaña__menu-despegable">
             <li >
-              <Link to='#justificacion'> Justificación  </Link>
+              <Link className="menu__item" to='#justificacion'> Justificación  </Link>
             </li>
             <li>
-              <Link to='#mision'> Misión  </Link>
+              <Link className="menu__item" to='#mision'> Misión  </Link>
             </li>
             <li>
-              <Link to='/#vision'> Visión  </Link>
+              <Link className="menu__item" to='/#vision'> Visión  </Link>
             </li>
             <li>
-              <Link to='#denominacion'> Denominación académica  </Link>
+              <Link className="menu__item" to='#denominacion'> Denominación académica  </Link>
             </li>
             <li>
-              <Link to='#SNIES'> Registro SNIES  </Link>
+              <Link className="menu__item" to='#SNIES'> Registro SNIES  </Link>
             </li>
           </ul>
         </li>

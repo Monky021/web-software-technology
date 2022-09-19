@@ -1,10 +1,19 @@
 import React from 'react'
+import { types } from '../types/types';
 
 const initialState = {
-    menu: 0
+    acordeonOpen: false
 }
 
-export const uiReducer = () => {
-
+export const uiReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case types.acordeonOpen:
+            return {
+                ...state,
+                acordeonOpen: action.payload
+            }
+        default:
+            return state;
+    }
 
 }

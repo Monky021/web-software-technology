@@ -8,5 +8,6 @@ export const types = {
     setRespuestas: 'Se guardan las respuestas [setRespuestas]',
     negarRespuesta: 'Se revierte el estado de usuario responde [negar respuesta]',
     cleanRespuestas: 'Se limpian las respuestas [cleanRespuestas] ',
-    respondeEncuesta: ' se actualiza el valor de responde encuesta del usuario [respondeEncuesta]'
+    respondeEncuesta: ' se actualiza el valor de responde encuesta del usuario [respondeEncuesta]',
+    acordeonOpen: 'Se abre el acordeon de preguntas frecuentes [preguntas frecuentes]'
 }

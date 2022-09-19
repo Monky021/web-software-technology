@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import {useDispatch} from 'react-redux'
+import { abrirAcordeon } from '../../actions/uiActions'
 import {preguntasFrecuentes} from '../../helpers/helpers'
 export const Acordeon = () => {
-
+    const dispatch = useDispatch()
     const [active, setActive] = useState(0)
     const handlerClickBx = (id) => {
         setActive(id)
@@ -9,6 +11,10 @@ export const Acordeon = () => {
             setActive(0)
         }
     }
+    useEffect(() => {
+      dispatch(abrirAcordeon(active))
+    }, [active])
+    
   return (
     <div className='accordion'>
         {

@@ -1,0 +1,54 @@
+
+
+.table_plan-estudio {
+    margin-top: 2em;
+    margin-bottom: 40px;
+}
+
+table {
+    table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid $complemento;
+ }
+ th, td {
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    
+
+ }
+ 
+
+ thead th:nth-child(1) {
+    width: 60%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px 40px 20px 40px;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $complemento3;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: $grisClaro;
+  }
+  
+
+  
+  table {
+    background-color: $complemento3;
+  }

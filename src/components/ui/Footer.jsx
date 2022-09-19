@@ -2,11 +2,15 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import logoUsco from "../../assets/logos/logo-universidad-surcolombiana.png";
 import { useStylesFooter } from "./StyleFooter";
-
+import { useSelector } from "react-redux";
 export const Footer = () => {
+
   const classes = useStylesFooter();
+
+  const acordeon = useSelector(state=> state.ui.acordeonOpen)
+
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} style={acordeon ? {marginTop: 200} : {}}>
       <Grid container justifyContent="center" alignItems="center">
         <Grid item>
           <img className={classes.img}  src={logoUsco}  alt="logo usco" />

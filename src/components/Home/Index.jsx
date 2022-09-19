@@ -23,7 +23,7 @@ export const Index = () => {
       </div>
       <Grid container direction="column" style={{ padding: "0px 10vw" }}>
         <Grid item>
-          <Box bgcolor={grisClaro} padding={8} marginBottom={5}>
+          <Box bgcolor={grisClaro} padding={0} marginBottom={5}>
             <h1 className="home__title" id='justificacion'>
               Justificación - Introducción
             </h1>

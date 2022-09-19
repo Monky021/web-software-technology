@@ -1,30 +1,34 @@
-import * as React from 'react';
-import { makeStyles } from '@mui/styles';
+import * as React from "react";
+import { makeStyles } from "@mui/styles";
 
-import  { colorPrimario, complemento, fontFamily, fontTamañoParrafo, fontTamañoSubTitulo2 } from '../../helpers/theme'
+import {
+  colorPrimario,
+  complemento,
+  fontFamily,
+  fontTamañoParrafo,
+  fontTamañoSubTitulo2,
+} from "../../helpers/theme";
 
 export const useStylesFooter = makeStyles({
-    img: {
-        marginTop: 0
-    },
+  img: {
+    marginTop: 0,
+  },
   footer: {
-      backgroundColor: complemento,
-      padding: '20px 5px'
+    backgroundColor: complemento,
+    padding: "20px 5px",
+    // marginTop: 200
   },
   textTitulo: {
-      fontFamily: fontFamily,
-      fontSize: fontTamañoSubTitulo2
+    fontFamily: fontFamily,
+    fontSize: fontTamañoSubTitulo2,
   },
   textParrafo: {
-      textAlign: 'center',
+    textAlign: "center",
     fontFamily: fontFamily,
     fontSize: fontTamañoParrafo,
-    margin: '5px 0px',
-    textDecoration: 'none',
-    color: '#000'
-
-  }, 
-  enlace: {
-
-  }
+    margin: "5px 0px",
+    textDecoration: "none",
+    color: "#000",
+  },
+  enlace: {},
 });

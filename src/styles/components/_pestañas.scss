@@ -17,6 +17,7 @@
 .item__boton {
   padding: 5px 10px;
   background-color: $complemento3;
+  color: black ;
   border-radius: 0px;
   border: none;
   font-size: 1em;
@@ -45,6 +46,7 @@
   border: 1px solid #cfcfcf;
   background: #eee;
   padding: 0;
+  z-index: 100;
   a {
     text-decoration: none;
     padding: 0px 5px;
@@ -61,4 +63,8 @@
 
 ul li:hover ul {
   display: block;
+}
+
+.menu__item {
+  color: black
 }
