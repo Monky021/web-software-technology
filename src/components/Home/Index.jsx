@@ -21,9 +21,9 @@ export const Index = () => {
       <div className="home__pestañas">
         <Pestañas />
       </div>
-      <Grid container direction="column" style={{ padding: "0px 10vw" }}>
+      <Grid container direction="column" style={{ padding: "0px 25vw" }}>
         <Grid item>
-          <Box bgcolor={grisClaro} padding={0} marginBottom={5}>
+          <Box bgcolor={grisClaro} padding={10} marginBottom={5}>
             <h1 className="home__title" id='justificacion'>
               Justificación - Introducción
             </h1>
